@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Beer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>0</Id>
+    <Name/>
+    <BeerType>Dark</BeerType>
+    <IsAlcoholic>false</IsAlcoholic>
+    <Manufacturer>
+        <Id>0</Id>
+        <Name/>
+    </Manufacturer>
+    <Ingredients>
+        <string>water</string>
+        <string>malt</string> 
+        <string>hops</string>
+        <string>sugar</string>
+    </Ingredients>
+    <Chars>
+        <AlcoholPercentage>0</AlcoholPercentage>
+        <Transparency>0</Transparency>
+        <IsFiltered>false</IsFiltered>
+        <NumberOfCalories>0</NumberOfCalories>
+        <SpillMethod>
+            <Volume>0</Volume>
+            <BottleType>Plastic</BottleType>
+        </SpillMethod>
+    </Chars>
+</Beer>

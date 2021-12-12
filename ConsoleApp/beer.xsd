@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Beer" type="BeerType"/>
+  <xs:complexType name="ManufacturerType">
+    <xs:sequence>
+      <xs:element type="xs:byte" name="Id"/>
+      <xs:element type="xs:string" name="Name"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngredientsType">
+    <xs:sequence>
+      <xs:element name="string" maxOccurs="unbounded" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="water"/>
+            <xs:enumeration value="malt"/>
+            <xs:enumeration value="hops"/>
+            <xs:enumeration value="sugar"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SpillMethodType">
+    <xs:sequence>
+      <xs:element name="Volume">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="BottleType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CharsType">
+    <xs:sequence>
+      <xs:element name="AlcoholPercentage">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Transparency">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:boolean" name="IsFiltered"/>
+      <xs:element name="NumberOfCalories">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="SpillMethodType" name="SpillMethod"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BeerType">
+    <xs:sequence>
+      <xs:element type="xs:byte" name="Id"/>
+      <xs:element type="xs:string" name="Name"/>
+      <xs:element type="xs:string" name="BeerType"/>
+      <xs:element type="xs:boolean" name="IsAlcoholic"/>
+      <xs:element type="ManufacturerType" name="Manufacturer"/>
+      <xs:element type="IngredientsType" name="Ingredients"/>
+      <xs:element type="CharsType" name="Chars"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

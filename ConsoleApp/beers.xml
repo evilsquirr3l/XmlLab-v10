@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Beers>
+    <Beer Id="1">
+        <Name>Lager</Name>
+        <BeerType>Dark</BeerType>
+        <IsAlcoholic>false</IsAlcoholic>
+        <Manufacturer>
+            <Id>1</Id>
+            <Name>Chernigivske</Name>
+        </Manufacturer>
+        <Ingredients>
+            <string>water</string>
+            <string>malt</string>
+            <string>hops</string>
+            <string>sugar</string>
+        </Ingredients>
+        <Chars>
+            <AlcoholPercentage>5</AlcoholPercentage>
+            <Transparency>6</Transparency>
+            <IsFiltered>false</IsFiltered>
+            <NumberOfCalories>100</NumberOfCalories>
+            <SpillMethod>
+                <Volume>1.5</Volume>
+                <BottleType>Plastic</BottleType>
+            </SpillMethod>
+        </Chars>
+    </Beer>
+    <Beer Id="2">
+        <Name>Dark</Name>
+        <BeerType>Dark</BeerType>
+        <IsAlcoholic>false</IsAlcoholic>
+        <Manufacturer>
+            <Id>1</Id>
+            <Name>Obolon</Name>
+        </Manufacturer>
+        <Ingredients>
+            <string>water</string>
+            <string>sugar</string>
+        </Ingredients>
+        <Chars>
+            <AlcoholPercentage>1</AlcoholPercentage>
+            <Transparency>5</Transparency>
+            <IsFiltered>true</IsFiltered>
+            <NumberOfCalories>150</NumberOfCalories>
+            <SpillMethod>
+                <Volume>3</Volume>
+                <BottleType>Plastic</BottleType>
+            </SpillMethod>
+        </Chars>
+    </Beer>
+</Beers>
