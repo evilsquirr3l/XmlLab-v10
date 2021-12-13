@@ -29,7 +29,7 @@ public static class XmlHelper
         var childNodes = xRoot!.SelectNodes("*")!;
         foreach (XmlNode n in childNodes)
         {
-            var gun = new Beer()
+            var beer = new Beer()
             {
                 Id = Convert.ToInt32(n.SelectSingleNode("@Id")?.InnerText),
                 BeerType = Enum.Parse<BeerType>(n.SelectSingleNode("BeerType")?.InnerText ?? "Unknown"),
@@ -47,7 +47,7 @@ public static class XmlHelper
                 }
             };
 
-            beers.Add(gun);
+            beers.Add(beer);
         }
 
         beers.Sort();
